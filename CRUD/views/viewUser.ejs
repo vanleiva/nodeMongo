@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viewUsers</title>
+</head>
+<body>
+    <table>
+        <% for(const datos of data){%>
+            <tr>
+                <td><%=datos._id%></td>
+                <td><%=datos.name%></td>
+                <td><%=datos.lastName%></td>
+                <td><%=datos.age%></td>
+                <td><form action="/delete/<%=datos._id%>" method="post">
+                    <button type="submit">eliminar</button>
+                </form></td>
+            </tr>
+        <% } %>
+    </table>
+    <a href="/">inicio</a>
+    <a href="/viewUser">ver</a>
+</body>
+</html>
